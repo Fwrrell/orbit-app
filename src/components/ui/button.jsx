@@ -21,11 +21,16 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         glass:
           "bg-[rgba(18,69,89,0.1)] backdrop-blur-[16px] border border-[rgba(174,195,176,0.15)] text-[#eff6e0] font-bold hover:bg-white/5 transition-all cursor-pointer",
+        orbitPrimary:
+          "bg-linear-to-br from-[#124559] to-[#598392] text-[#eff6e0] transition-all duration-300 ease-in-out hover:brightness-110 cursor-pointer",
+        orbitSecondary:
+          "border border-[rgba(174,195,176,0.3)] text-[#aec3b0] transition-all duration-300 ease-in-out hover:border-[#aec3b0] hover:text-[#eff6e0] hover:bg-white/5 cursor-pointer",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        regSizeOrbit: "h-auto px-8 py-4 text-lg rounded-2xl gap-3",
         icon: "size-9",
         "icon-sm": "size-8",
         "icon-lg": "size-10",

@@ -57,8 +57,6 @@ body {
     radial-gradient(at 50% 0%, #124559 0, transparent 50%),
     radial-gradient(at 100% 0%, #598392 0, transparent 50%);
   background-color: #01161e;
-  min-height: 100vh;
-  pointer-events: none;
 }
 
 .glass-card {
