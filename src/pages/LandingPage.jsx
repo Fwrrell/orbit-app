@@ -123,7 +123,7 @@ const LandingPage = () => {
           <div className="relative h-125 lg:h-150">
             <div className="absolute -inset-4 bg-[var(--accent-mid)]/5 blur-3xl rounded-full"></div>
             <div className="w-full h-full relative glass-card rounded-[2.5rem] overflow-hidden">
-              {/* Frame Live Preview*/}
+              {/* Frame Live Preview */}
               <div className="absolute top-6 left-8 z-10 flex items-center gap-2">
                 <div className="w-2 h-2 bg-[#aec3b0] rounded-full animate-pulse" />
                 <span className="text-[10px] font-mono font-bold text-[#aec3b0] tracking-[0.2em] uppercase">
