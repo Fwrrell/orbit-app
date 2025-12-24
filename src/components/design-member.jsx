@@ -63,7 +63,7 @@ export function MemberList() {
             {/* jobdesk with character reveal */}
             <div className="relative mb-12 min-h-[140px]">
               <AnimatePresence mode="wait">
-                <motion.blockjobdesk
+                <motion.blockquote
                   key={activeIndex}
                   className="text-4xl md:text-5xl font-light text-[var(--text-light)] leading-[1.15] tracking-tight"
                   initial="hidden"
@@ -96,7 +96,7 @@ export function MemberList() {
                       {word}
                     </motion.span>
                   ))}
-                </motion.blockjobdesk>
+                </motion.blockquote>
               </AnimatePresence>
             </div>
 

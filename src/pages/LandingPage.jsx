@@ -1,55 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
-import { Network, Zap, ArrowRight, ChevronDown } from "lucide-react";
+import { Network, Zap, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "../components/ui/button";
-import GraphPreview from "../components/GraphPreview";
 import { MemberList } from "@/components/design-member";
-
-// dummy data maker
-const generateRandomData = () => {
-  const nodeCount = 11; // node maker
-
-  const colors = [
-    "var(--accent-deep, #124559)",
-    "var(--accent-mid, #598392)",
-    "var(--highlight, #aec3b0)",
-  ];
-
-  // 1. Generate Nodes
-  const nodes = Array.from({ length: nodeCount }, (_, i) => ({
-    id: `node-${i}`,
-    // channel akan ditampilkan di tengah node (d.channel + 1)
-    channel: Math.floor(Math.random() * 9),
-    color: colors[i % colors.length], // Distribusi warna
-  }));
-
-  // 2. Generate Links
-  const links = [];
-  // Kita hubungkan node pusat (index 0) ke beberapa node lain
-  for (let i = 1; i < nodes.length; i++) {
-    if (Math.random() > 0.3) {
-      links.push({
-        source: nodes[0].id,
-        target: nodes[i].id,
-      });
-    }
-  }
-
-  // Tambahkan beberapa koneksi acak antar node luar
-  for (let i = 1; i < 5; i++) {
-    links.push({
-      source: nodes[i].id,
-      target: nodes[i + 5]?.id || nodes[1].id,
-    });
-  }
-
-  return { nodes, links };
-};
+import { useGraphSimulation } from "@/hooks/useGraphSimulation";
 
 const LandingPage = () => {
-  const [graphData, setGraphData] = useState(generateRandomData());
   const navigate = useNavigate();
 
   const [navItem, setNavItem] = useState([
@@ -63,6 +21,36 @@ const LandingPage = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const graphApi = useGraphSimulation({
+    containerId: "landing-preview-canvas",
+    setRouters: null,
+    setSimulationResult: null,
+    setIsProcessing: null,
+  });
+
+  // untuk generate random graph saat load
+  useEffect(() => {
+    // tambah delay agar frame ter render lebih dulu
+    const timer = setTimeout(() => {
+      if (graphApi.current) {
+        // Generate 8 node acak
+        const width =
+          document.getElementById("landing-preview-canvas")?.clientWidth || 600;
+        const height =
+          document.getElementById("landing-preview-canvas")?.clientHeight ||
+          400;
+
+        for (let i = 0; i < 8; i++) {
+          const x = Math.random() * width * 0.8 + width * 0.1; // Margin 10%
+          const y = Math.random() * height * 0.8 + height * 0.1;
+          graphApi.current.addNode(x, y, false);
+        }
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative min-h-screen selection:bg-[var(--accent-mid)] selection:text-white">
@@ -140,15 +128,18 @@ const LandingPage = () => {
           <div className="relative h-125 lg:h-150">
             <div className="absolute -inset-4 bg-[var(--accent-mid)]/5 blur-3xl rounded-full"></div>
             <div className="w-full h-full relative glass-card rounded-[2.5rem] overflow-hidden">
-              {/* Frame Live Preview */}
+              {/* Frame Preview */}
               <div className="absolute top-6 left-8 z-10 flex items-center gap-2">
                 <div className="w-2 h-2 bg-[#aec3b0] rounded-full animate-pulse" />
                 <span className="text-[10px] font-mono font-bold text-[#aec3b0] tracking-[0.2em] uppercase">
-                  Live Graph Preview
+                  Graph Preview
                 </span>
               </div>
 
-              <GraphPreview data={graphData} />
+              <div
+                id="landing-preview-canvas"
+                className="absolute inset-0 cursor-grab active:cursor-grabbing"
+              ></div>
             </div>
           </div>
         </section>

@@ -65,14 +65,14 @@ const SimulationPage = () => {
       <div className="max-w-420 mx-auto md:h-[calc(100vh-160px)]">
         <div
           className={`rounded-2xl h-full transition-all duration-300 ease-in-out
-            ${showControls ? "grid grid-cols-10 gap-4" : "flex"}
+            ${showControls ? "grid grid-cols-12 gap-4" : "flex"}
           `}
         >
           {/* Graph Playground Area*/}
           <div
             id="visual-container"
             className={`relative overflow-hidden rounded-xl bg-black/10 ${
-              showControls ? "col-span-8" : "flex-1"
+              showControls ? "col-span-9" : "flex-1"
             }`}
           >
             {/* Animated Grid Background */}
@@ -97,7 +97,7 @@ const SimulationPage = () => {
 
           {/* Control Panel */}
           {showControls && (
-            <div className="col-span-2 flex flex-col gap-4 h-full min-h-0">
+            <div className="col-span-3 flex flex-col gap-4 h-full min-h-0">
               {/* Control Box 1 */}
               <div className="glass-card rounded-xl p-5 flex flex-col gap-4 flex-1 min-h-0">
                 <div className="flex items-center justify-between">
@@ -199,7 +199,7 @@ const SimulationPage = () => {
                                 "-"
                               )}
                             </TableCell>
-                            <TableCell className={"text-center"}>
+                            <TableCell>
                               {node.totalInterference !== undefined
                                 ? node.totalInterference.toFixed(1)
                                 : "0.0"}

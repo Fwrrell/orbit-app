@@ -24,6 +24,7 @@ export const useGraphSimulation = ({
   setIsProcessing,
 }) => {
   const apiRef = useRef({
+    addNode: () => {},
     removeNode: () => {},
     clearGraph: () => {},
     runDSATUR: () => {},
@@ -64,14 +65,14 @@ export const useGraphSimulation = ({
       addNode(x, y);
     });
 
-    function addNode(x, y) {
+    function addNode(x, y, fixed = true) {
       const newNode = {
         id: nodeIdCounter++,
         label: String.fromCharCode(65 + nodeIdCounter - 1),
         x: x,
         y: y,
-        fx: x,
-        fy: y,
+        fx: fixed ? x : null,
+        fy: fixed ? y : null,
         channel: null,
         totalInterference: 0,
       };
@@ -81,6 +82,8 @@ export const useGraphSimulation = ({
       recalculateLinks();
       updateGraph();
     }
+
+    apiRef.current.addNode = addNode;
 
     // function ini assign ke ref agar bisa dipanggil dari UI
     apiRef.current.removeNode = (id) => {
@@ -98,15 +101,23 @@ export const useGraphSimulation = ({
       nodes = [];
       links = [];
       nodeIdCounter = 0;
-      setRouters([]);
-      setSimulationResult([]);
+
+      if (setRouters) {
+        setRouters([]);
+      }
+      if (setSimulationResult) {
+        setSimulationResult([]);
+      }
+
       updateGraph();
       simulation.nodes(nodes);
       simulation.alpha(0.3).restart();
     };
 
     function syncState() {
-      setRouters([...nodes]);
+      if (setRouters) {
+        setRouters([...nodes]);
+      }
     }
 
     function recalculateLinks() {
