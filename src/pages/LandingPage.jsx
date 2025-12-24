@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Button } from "../components/ui/button";
 import GraphPreview from "../components/GraphPreview";
+import { MemberList } from "@/components/design-member";
 
 // dummy data maker
 const generateRandomData = () => {
@@ -51,13 +52,25 @@ const LandingPage = () => {
   const [graphData, setGraphData] = useState(generateRandomData());
   const navigate = useNavigate();
 
+  const [navItem, setNavItem] = useState([
+    { name: "Theory", directId: "theory-section" },
+    { name: "Member of Group", directId: "member-section" },
+  ]);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="relative min-h-screen selection:bg-[var(--accent-mid)] selection:text-white">
       {/* Background */}
-      <div className="mesh-gradient fixed inset-0 -z-10 pointer-events-none" />
+      <div className="mesh-gradient absolute top-0 left-0 w-full h-[80vh] -z-10 pointer-events-none" />
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 px-8 py-6 lg:px-20 flex justify-between items-center backdrop-blur-md pointer-events-auto">
+      <nav className="fixed top-0 w-full z-50 px-8 py-6 lg:px-20 flex justify-between items-center backdrop-blur-md pointer-events-auto border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-linear-to-br from-[var(--accent-deep)] to-[var(--accent-mid)] rounded-xl flex items-center justify-center">
             <Network className="text-[--text-light] w-6 h-6" />
@@ -66,21 +79,25 @@ const LandingPage = () => {
             ORBIT
           </span>
         </div>
-        <div className="hidden md:flex gap-10 items-center">
-          {["About", "Member of Group"].map((item) => (
+        <div className="hidden md:flex gap-10 items-center uppercase tracking-wider">
+          {navItem.map((item) => (
             <a
-              key={item}
+              key={item.directId}
               href="#"
               className="text-sm font-medium text-[var(--highlight)] hover:text-[var(--text-light)] transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.directId);
+              }}
             >
-              {item}
+              {item.name}
             </a>
           ))}
           <Button variant="glass">Rate Experience!</Button>
         </div>
       </nav>
 
-      <main className="pt-24 px-8 lg:px-20 max-w-7xl mx-auto">
+      <main className="pt-32 px-8 lg:px-20 max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="grid lg:grid-cols-2 gap-16 items-center min-h-[80vh] mb-32">
           {/* TODO: animate fade-in then slide in from left */}
@@ -134,6 +151,25 @@ const LandingPage = () => {
               <GraphPreview data={graphData} />
             </div>
           </div>
+        </section>
+
+        {/* Theory Section */}
+        <section id="theory-section" className="py-32">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-6xl font-extrabold text-[var(--text-light)] mb-4">
+              Theory
+            </h2>
+          </div>
+        </section>
+
+        {/* Member Section */}
+        <section id="member-section" className="py-40 border-t border-white/10">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-6xl font-extrabold text-[var(--text-light)] mb-4">
+              Member of Group
+            </h2>
+          </div>
+          <MemberList />
         </section>
       </main>
     </div>
