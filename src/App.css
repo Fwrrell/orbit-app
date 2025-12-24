@@ -65,6 +65,21 @@ body {
   border: 1px solid rgba(174, 195, 176, 0.15);
 }
 
+/* Untuk Chrome, Safari, Edge */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Untuk Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* sembunyikan scrollbar */
+}
+
+/* Untuk IE/Edge lama */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
