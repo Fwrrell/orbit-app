@@ -23,7 +23,7 @@ const members = [
   },
 ];
 
-export function MemberList() {
+export function MemberSection() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const goNext = () => setActiveIndex((prev) => (prev + 1) % members.length);

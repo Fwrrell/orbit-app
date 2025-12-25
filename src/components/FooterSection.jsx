@@ -1,9 +1,9 @@
-import { Network, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
-export function Footer() {
-  const sha = import.meta.env.VERCEL_GIT_COMMIT_SHA;
-  const owner = import.meta.env.VERCEL_GIT_REPO_OWNER;
-  const repo = import.meta.env.VERCEL_GIT_REPO_SLUG;
+export function FooterSection() {
+  const sha = import.meta.env.VITE_VERCEL_GIT_COMMIT_SHA;
+  const owner = import.meta.env.VITE_VERCEL_GIT_REPO_OWNER;
+  const repo = import.meta.env.VITE_VERCEL_GIT_REPO_SLUG;
 
   const shortSha = sha?.slice(0, 7);
 
@@ -15,9 +15,19 @@ export function Footer() {
       : null;
 
   return (
-    <footer className="py-20 border-t border-white/5 px-8 lg:px-20 text-center">
+    <footer className="pb-20 pt-10 border-t border-white/10 px-8 lg:px-20 text-center font-display">
       <div className="flex items-center justify-center gap-3 mb-8 opacity-50">
-        <Network className="text-[#aec3b0] w-5 h-5" />
+        <div className="flex items-center">
+          <a href="/" className="flex items-center">
+            <img
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              src="/orbit-logo.png"
+              alt="Orbit Logo"
+              className="h-24 w-auto object-contain transition-transform"
+            />
+          </a>
+        </div>
         <span className="text-sm font-bold tracking-[0.3em] text-white">
           ORBIT PROJECT
         </span>
@@ -54,7 +64,7 @@ export function Footer() {
       )}
 
       {/* Copyright */}
-      <p className="text-sm text-[#aec3b0]/40 font-mono">
+      <p className="text-sm text-[#aec3b0]/40 font-semibold">
         © 2025 — ALL RIGHTS RESERVED
       </p>
     </footer>
