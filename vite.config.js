@@ -11,4 +11,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  define: {
+    "import.meta.env.VITE_VERCEL_GIT_COMMIT_SHA": JSON.stringify(
+      process.env.VERCEL_GIT_COMMIT_SHA
+    ),
+    "import.meta.env.VITE_VERCEL_GIT_REPO_OWNER": JSON.stringify(
+      process.env.VERCEL_GIT_REPO_OWNER
+    ),
+    "import.meta.env.VITE_VERCEL_GIT_REPO_SLUG": JSON.stringify(
+      process.env.VERCEL_GIT_REPO_SLUG
+    ),
+  },
 });
