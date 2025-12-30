@@ -147,20 +147,26 @@ const LandingPage = () => {
 
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl lg:text-7xl font-extrabold leading-[1.1] text-[var(--text-light)] tracking-tight"
+              className="text-5xl lg:text-6xl font-extrabold leading-[1.1] text-[var(--text-light)] tracking-tight"
             >
-              Optimal Router <br />
+              Optimal <br />
+              Router <br />
               <span className="text-[var(--highlight)] italic font-normal">
-                Balance Interference & Topology
+                Balance <br />
+                Interference & <br />
+                Topology
               </span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg text-[var(--highlight)]/80 max-w-lg leading-relaxed font-medium"
+              className="text-lg text-[var(--highlight)]/80 max-w-lg leading-relaxed font-medium text-justify"
             >
-              ORBIT (Optimal Router Balanced Interference and Topology) that implements Graph Theory to solve channel allocation optimization problems for Wi-Fi routers.
-              By utilizing the TSC-DSATUR algorithm, the application efficiently minimizes signal interference between neighboring routers.
+              ORBIT (Optimal Router Balanced Interference and Topology) that
+              implements Graph Theory to solve channel allocation optimization
+              problems for Wi-Fi routers. By utilizing the TSC-DSATUR algorithm,
+              the application efficiently minimizes signal interference between
+              neighboring routers.
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
@@ -181,7 +187,14 @@ const LandingPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button variant="orbitSecondary" size="regSizeOrbit">
+                <Button
+                  variant="orbitSecondary"
+                  size="regSizeOrbit"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("theory-section");
+                  }}
+                >
                   Learn More <ArrowRight size={20} />
                 </Button>
               </motion.div>
