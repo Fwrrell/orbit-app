@@ -5,22 +5,34 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const members = [
   {
     jobdesk:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magni nemo hic!",
-    name: "Samsul",
-    npm: "618241123",
+      "Bertanggung jawab menyusun algoritma pewarnaan graph agar sistem berjalan secara efisien.",
+    name: "Prospero Phelix",
+    npm: "6182401043",
   },
   {
     jobdesk:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magni nemo hic!",
-    name: "Udin",
-    npm: "618241123",
+      "Bertanggung jawab desain UI dan interface aplikasi agar lebih mudah visualisasi dan agar dapat berinteraksi langsung.",
+    name: "Muhammad Farrel Putra Rifani",
+    npm: "6182401025",
   },
   {
     jobdesk:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore magni nemo hic!",
-    name: "Anis",
-    npm: "618241123",
+      "Bertanggung jawab untuk membuat animasi untuk video presentasi agar lebih mudah penjelasan cara kerjanya.",
+    name: "Efrem Andra Winata",
+    npm: "6182401019",
   },
+  {
+    jobdesk:
+    "Bertanggung jawab menyusun teori dan memastikan konsep dasar.",
+    name : "Hansel Melkior Leslie",
+    npm : "6182401021",
+  },
+  {
+    jobdesk:
+    "Bertanggung jawab untuk membuat poster agar informasi dapat disampaikan secara visual.",
+    name : "Jose Jonathan Haryadi",
+    npm : "6182401063",
+  }
 ];
 
 export function MemberSection() {
