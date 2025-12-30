@@ -151,7 +151,7 @@ const LandingPage = () => {
             >
               Optimal Router <br />
               <span className="text-[var(--highlight)] italic font-normal">
-                Balance & Topology
+                Balance Interference & Topology
               </span>
             </motion.h1>
 
@@ -159,10 +159,8 @@ const LandingPage = () => {
               variants={fadeInUp}
               className="text-lg text-[var(--highlight)]/80 max-w-lg leading-relaxed font-medium"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
-              voluptatem voluptatum quibusdam, officiis deleniti quisquam atque
-              dolores neque perferendis temporibus consequatur quasi aliquam
-              deserunt.
+              ORBIT (Optimal Router Balanced Interference and Topology) that implements Graph Theory to solve channel allocation optimization problems for Wi-Fi routers.
+              By utilizing the TSC-DSATUR algorithm, the application efficiently minimizes signal interference between neighboring routers.
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">

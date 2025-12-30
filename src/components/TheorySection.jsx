@@ -44,17 +44,16 @@ export function TheorySection() {
 
           <h3 className="text-3xl lg:text-4xl font-bold text-[var(--text-light)] leading-tight">
             {/* ganti ini: dua teks beda warna buat typography aja (mau pake salah satu gamasalah) */}
-            Lorem, ipsum dolor. <br />
+            ORBIT <br />
             <span className="text-[var(--highlight)] leading-relaxed">
-              Lorem ipsum dolor sit.
+              Hello, I'm Orbit!
             </span>
           </h3>
           {/* ganti ini: penjelasan */}
           <p className="text-[var(--highlight)] leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            similique distinctio hic qui? Labore, dolores? Inventore iure ea
-            delectus quo tempora fugit quaerat quis molestiae, deleniti atque
-            minus ipsam aliquid unde? Porro.
+            Wireless networks are the backbone of modern connectivity. However, ensuring optimal performance is challenging due to invisible forces
+            like Co-Channel Interference. This occurs when multiple access points compete for the same frequency channel while positioned too close to one another.
+            Through this interactive simulation, it will be easier to learn how to configure a network topology to minimize signal clashes and mazimize efficiency.
           </p>
           <div className="flex gap-4 p-4 rounded-2xl bg-[var(--accent-mid)]/10 border border-white/10">
             <div className="shrink-0 text-[var(--highlight)]">
@@ -62,9 +61,8 @@ export function TheorySection() {
             </div>
             {/* ganti ini: kalo mau ada ringkasannya */}
             <p className="text-sm italic text-[var(--text-highlight)]">
-              Ringkasan: Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Aperiam blanditiis reiciendis cupiditate! Alias velit
-              voluptate iure.
+              ORBIT is a web-based simulation tool designed to help you visualize, position, and optimalize WiFi channels-specifically 
+              for the crowded 2.4GHz frequency.
             </p>
           </div>
         </div>
