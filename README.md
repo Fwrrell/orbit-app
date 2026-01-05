@@ -2,7 +2,7 @@
   <br />
   <a href="https://orbit-sd.vercel.app">
     <picture>
-      <img src="https://orbit-sd.vercel.app/orbit-logo.png" alt="Orbit Logo" width="128" height="128">
+      <img src="https://orbit-sd.vercel.app/orbit-logo.png" alt="Orbit Logo" width="256" height="256">
     </picture>
   </a>
 </p>
@@ -91,11 +91,6 @@
 
    - Hapus semua node & edge dalam satu klik
    - Mengembalikan playground ke kondisi awal untuk eksperimen ulang
-
-8. **Visual Feedback & UX Enhancements**
-   - Grid animasi sebagai latar belakang
-   - Highlight instruksi saat graph kosong
-   - Transisi halus panel & elemen UI
 
 ## 🛠️ Tech Stack
 
