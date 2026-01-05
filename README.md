@@ -26,6 +26,19 @@
 
 🔗 **Live Demo:** [orbit-sd.vercel.app](https://orbit-sd.vercel.app)
 
+## 📷 Screenshots
+
+<table align="center">
+  <tr>
+    <td><img src="/screenshots/homePage.png" alt="Hero Section from HomePage"></td>
+    <td><img src="/screenshots/simulationPage.png" alt="Simulation Page"></td>
+  </tr>
+  <tr>
+    <td><img src="/screenshots/theorySection.png" alt="Theory Section from HomePage"></td>
+    <td><img src="./screenshots/memberSection.png" alt="Member Section from HomePage"></td>
+  </tr>
+</table>
+
 ## 📃 Deskripsi
 
 **Orbit** adalah aplikasi berbasis web yang mengimplementasikan **Graph Theory** untuk memecahkan masalah optimisasi penggunaan _channel_ pada router Wi-Fi. Aplikasi ini menggunakan algoritma **TSC-DSATUR** untuk meminimalkan interferensi sinyal antar router secara efisien.
@@ -64,35 +77,6 @@ Pastikan sudah menginstall [Node.js](https://nodejs.org/).
     ```
 
 4.  Buka browser dan akses `http://localhost:5173`.
-
-## ⚙️ Contribute
-
-1.  **Fork Project**
-    Klik tombol "Fork" di pojok kanan atas halaman repository untuk copy project ke akun GitHub mu.
-
-2.  **Buat Feature Branch**
-    Bikin branch baru untuk fitur atau perbaikan yang ingin di kerjakan.
-
-    ```bash
-    git checkout -b feature/fitur-keren
-    ```
-
-3.  **Commit Perubahan**
-    Modifikasi code nya, lalu commit perubahannya dengan message yang jelas.
-
-    ```bash
-    git commit -m "feat: menambahkan fitur keren"
-    ```
-
-4.  **Push ke Branch**
-    Upload code perubahannya ke repository hasil fork.
-
-    ```bash
-    git push origin feature/fitur-keren
-    ```
-
-5.  **Buat Pull Request**
-    Kembali ke repository asli, buka tab "Pull Requests" lalu New Pull Request. Jelaskan perubahannya.
 
 ## License
 
