@@ -44,83 +44,32 @@ export function TheorySection() {
 
           <h3 className="text-3xl lg:text-4xl font-bold text-[var(--text-light)] leading-tight">
             {/* ganti ini: dua teks beda warna buat typography aja (mau pake salah satu gamasalah) */}
-            Lorem, ipsum dolor. <br />
+            ORBIT <br />
             <span className="text-[var(--highlight)] leading-relaxed">
-              Lorem ipsum dolor sit.
+              Hello, I'm Orbit!
             </span>
           </h3>
           {/* ganti ini: penjelasan */}
-          <p className="text-[var(--highlight)] leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            similique distinctio hic qui? Labore, dolores? Inventore iure ea
-            delectus quo tempora fugit quaerat quis molestiae, deleniti atque
-            minus ipsam aliquid unde? Porro.
+          <p className="text-[var(--highlight)] leading-relaxed text-justify">
+            Wireless networks are the backbone of modern connectivity. However,
+            ensuring optimal performance is challenging due to invisible forces
+            like Co-Channel Interference. This occurs when multiple access
+            points compete for the same frequency channel while positioned too
+            close to one another. Through this interactive simulation, it will
+            be easier to learn how to configure a network topology to minimize
+            signal clashes and mazimize efficiency.
           </p>
           <div className="flex gap-4 p-4 rounded-2xl bg-[var(--accent-mid)]/10 border border-white/10">
             <div className="shrink-0 text-[var(--highlight)]">
               <Quote size={24} />
             </div>
             {/* ganti ini: kalo mau ada ringkasannya */}
-            <p className="text-sm italic text-[var(--text-highlight)]">
-              Ringkasan: Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Aperiam blanditiis reiciendis cupiditate! Alias velit
-              voluptate iure.
+            <p className="text-sm italic text-[var(--text-highlight)] text-justify">
+              ORBIT is a web-based simulation tool designed to help you
+              visualize, position, and optimalize WiFi channels-specifically for
+              the crowded 2.4GHz frequency.
             </p>
           </div>
-        </div>
-      </div>
-
-      {/* Konsep Theory 2 - per point */}
-      <div className="grid md:grid-cols-3 gap-6">
-        {/* Card 1 */}
-        <div className="glass-card p-8 rounded-[2rem] border border-white/10 transition-all duration-500 hover:scale-[1.02] hover:bg-white/5 group">
-          <div className="w-14 h-14 rounded-2xl bg-[var(--highlight)]/10 flex items-center justify-center mb-6 text-[var(--highlight)] group-hover:bg-[var(--highlight)] group-hover:text-[var(--accent-deep)] transition-all duration-300 shadow-inner">
-            <Network size={26} />
-          </div>
-          {/* ganti ini: judul card */}
-          <h3 className="text-xl font-bold mb-4 text-[var(--text-light)] tracking-tight">
-            Lorem, ipsum.
-          </h3>
-          {/* ganti ini: deskripsi */}
-          <p className="text-sm text-[var(--highlight)]/70 leading-relaxed font-medium">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-            fuga rem ipsa temporibus, neque vel asperiores explicabo maiores
-            sapiente rerum, reiciendis debitis dolorem ducimus.
-          </p>
-        </div>
-
-        {/* Card 2 */}
-        <div className="glass-card p-8 rounded-[2rem] border border-white/10 transition-all duration-500 hover:scale-[1.02] hover:bg-white/5 group">
-          <div className="w-14 h-14 rounded-2xl bg-[var(--highlight)]/10 flex items-center justify-center mb-6 text-[var(--highlight)] group-hover:bg-[var(--highlight)] group-hover:text-[var(--accent-deep)] transition-all duration-300 shadow-inner">
-            <Palette size={26} />
-          </div>
-          {/* ganti ini: judul card */}
-          <h3 className="text-xl font-bold mb-4 text-[var(--text-light)] tracking-tight">
-            Lorem, ipsum.
-          </h3>
-          {/* ganti ini: deskripsi */}
-          <p className="text-sm text-[var(--highlight)]/70 leading-relaxed font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            ipsum quas doloribus beatae atque rerum sint quasi excepturi quae
-            perspiciatis, aperiam ut, ratione quia.
-          </p>
-        </div>
-
-        {/* Card 3 */}
-        <div className="glass-card p-8 rounded-[2rem] border border-white/10 transition-all duration-500 hover:scale-[1.02] hover:bg-white/5 group">
-          <div className="w-14 h-14 rounded-2xl bg-[var(--highlight)]/10 flex items-center justify-center mb-6 text-[var(--highlight)] group-hover:bg-[var(--highlight)] group-hover:text-[var(--accent-deep)] transition-all duration-300 shadow-inner">
-            <Cpu size={26} />
-          </div>
-          {/* ganti ini: judul card */}
-          <h3 className="text-xl font-bold mb-4 text-[var(--text-light)] tracking-tight">
-            Lorem, ipsum.
-          </h3>
-          {/* ganti ini: deskripsi */}
-          <p className="text-sm text-[var(--highlight)]/70 leading-relaxed font-medium">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
-            magnam excepturi quis aliquam quo officiis tempore assumenda,
-            aperiam doloribus libero! Sunt natus illum eligendi.
-          </p>
         </div>
       </div>
     </div>

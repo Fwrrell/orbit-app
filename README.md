@@ -60,7 +60,7 @@ Pastikan sudah menginstall [Node.js](https://nodejs.org/).
 1.  **Clone repository ini:**
 
     ```bash
-    git clone [https://github.com/Fwrrell/orbit-app.git](https://github.com/Fwrrell/orbit-app.git)
+    git clone https://github.com/Fwrrell/orbit-app.git
     cd orbit-app
     ```
 
