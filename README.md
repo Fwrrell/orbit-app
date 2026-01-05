@@ -30,18 +30,72 @@
 
 <table align="center">
   <tr>
-    <td><img src="/screenshots/homePage.png" alt="Hero Section from HomePage"></td>
-    <td><img src="/screenshots/simulationPage.png" alt="Simulation Page"></td>
+    <td align="center">
+      <img src="https://orbit-sd.vercel.app/screenshots/homePage.png" alt="Home Page – Hero Section" width="100%"><br/>
+      <b>Home Page</b>
+    </td>
+    <td align="center">
+      <img src="https://orbit-sd.vercel.app/screenshots/simulationPage.png" alt="Simulation Page" width="100%"><br/>
+      <b>Simulation Page</b>
+    </td>
   </tr>
   <tr>
-    <td><img src="/screenshots/theorySection.png" alt="Theory Section from HomePage"></td>
-    <td><img src="./screenshots/memberSection.png" alt="Member Section from HomePage"></td>
+    <td align="center">
+      <img src="https://orbit-sd.vercel.app/screenshots/theorySection.png" alt="Theory Section" width="100%"><br/>
+      <b>Theory Section</b>
+    </td>
+    <td align="center">
+      <img src="https://orbit-sd.vercel.app/screenshots/memberSection.png" alt="Member Section" width="100%"><br/>
+      <b>Member Section</b>
+    </td>
   </tr>
 </table>
 
-## 📃 Deskripsi
+## 📃 Description
 
 **Orbit** adalah aplikasi berbasis web yang mengimplementasikan **Graph Theory** untuk memecahkan masalah optimisasi penggunaan _channel_ pada router Wi-Fi. Aplikasi ini menggunakan algoritma **TSC-DSATUR** untuk meminimalkan interferensi sinyal antar router secara efisien.
+
+## ✨ Features
+
+1. **Interactive Graph Playground**
+
+   - Tambah router (node) dengan klik area playground
+   - Posisi node bisa diatur bebas dengan drag & drop
+
+2. **Dynamic Interference Detection**
+
+   - Deteksi otomatis interferensi sinyal antar router berdasarkan jarak
+   - Edge dibuat untuk merepresentasikan potensi konflik channel Wi-Fi
+
+3. **Real-Time Graph Update**
+
+   - Graph langsung diperbarui saat node ditambah, digeser, atau dihapus
+   - Menggunakan D3.js force simulation & React state sync
+
+4. **Router List (Node Management Panel)**
+
+   - Panel menampilkan daftar router aktif (label, koordinat, tombol hapus)
+   - Memudahkan monitoring & manajemen router
+
+5. **Node Deletion & Synchronization**
+
+   - Router bisa dihapus via Control Panel
+   - Node & edge terkait otomatis hilang, UI tetap sinkron dengan D3
+
+6. **Configurable Control Panel (Bento Grid Layout)**
+
+   - Panel kontrol bisa ditampilkan/disembunyikan
+   - Layout fleksibel: fokus utama tetap pada playground
+
+7. **Reset View (Graph Clearing)**
+
+   - Hapus semua node & edge dalam satu klik
+   - Mengembalikan playground ke kondisi awal untuk eksperimen ulang
+
+8. **Visual Feedback & UX Enhancements**
+   - Grid animasi sebagai latar belakang
+   - Highlight instruksi saat graph kosong
+   - Transisi halus panel & elemen UI
 
 ## 🛠️ Tech Stack
 
