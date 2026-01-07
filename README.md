@@ -22,7 +22,13 @@
   <br />
 </p>
 
-##
+## 👥 Group
+
+**Efrem Andra Winata** - 6182401019 : Bertanggung jawab pembuatan Video pendek mengenai penjelasan proyek.
+**Hansel Melkior Leslie** - 6182401021 : merumuskan konsep dasar untuk video & proyek pewarnaan graf.
+**Muhammad Farrel Putra Rifani** - 6182401025 : bertanggung jawab pembuatan _User Interface_ dan desain Website.
+**Prospero Phelix** - 6182401043 : bertanggung jawab membuat algoritma pewarnaan graf dan _User Interface_ simulasi.
+**Jose Jonathan Haryadi** - 6182401063 : bertanggung jawab membuat poster penjelasan proyek.
 
 🔗 **Live Demo:** [orbit-sd.vercel.app](https://orbit-sd.vercel.app)
 
